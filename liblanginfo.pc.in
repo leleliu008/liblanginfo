@@ -1,0 +1,11 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: liblanginfo
+URL: https://github.com/leleliu008/liblanginfo
+Description: langinfo.h and its implementation
+Version: @PROJECT_VERSION@
+Libs: -L${libdir} -llanginfo
+Cflags: -I${includedir}
