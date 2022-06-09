@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0.0)
 
-project(liblanginfo CXX)
+project(liblanginfo C)
 
 set(PROJECT_VERSION       1.0.0)
 set(PROJECT_VERSION_MAJOR 1)
@@ -12,8 +12,8 @@ if (NOT CMAKE_BUILD_TYPE)
 endif()
 ########################################################################################
 
-add_library(liblanginfo-static STATIC langinfo.cpp)
-add_library(liblanginfo-shared SHARED langinfo.cpp)
+add_library(liblanginfo-static STATIC langinfo.c)
+add_library(liblanginfo-shared SHARED langinfo.c)
 
 set_target_properties(liblanginfo-static PROPERTIES OUTPUT_NAME langinfo CLEAN_DIRECT_OUTPUT 1 EXPORT_NAME static)
 set_target_properties(liblanginfo-shared PROPERTIES OUTPUT_NAME langinfo CLEAN_DIRECT_OUTPUT 1 EXPORT_NAME shared)
